@@ -25,4 +25,11 @@ spec:
   serviceAccountName: prometheus-k8s
   serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector: {}
+  storage:
+    volumeClaimTemplate:
+      spec:
+        storageClassName: pure
+        resources:
+          requests:
+            storage: 200Gi
   version: v2.5.0
